@@ -5,8 +5,8 @@ import './NavBar.css';
 class NavBar extends Component {
   render() {
     return (
-      <Navbar>
-        
+      <Navbar className = "blue">
+
       </Navbar>
     );
   }
