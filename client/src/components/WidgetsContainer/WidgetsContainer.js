@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {Button} from 'react-materialize';
 import Widget from './Widget';
+import { connect } from "react-redux";
+import { getData } from "../../actions";
 
 class WidgetsContainer extends Component {
 
@@ -29,4 +31,7 @@ const mapStateToProps = state => {
   };
 };
 
-export default WidgetsContainer;
+export default connect(
+  mapStateToProps,
+  { getData }
+)(WidgetsContainer);
