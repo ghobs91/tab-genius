@@ -6,8 +6,13 @@ class WidgetsContainer extends Component {
   render() {
     return (
       <div className="WidgetsContainer">
-        <Widget/>
+        
+          {this.props.widgets.map(widget => (
+              <Widget widget={widget} />
+          ))}
+
         <Button floating large className='blue addButton' waves='light' icon='add' />
+        
       </div>
     );
   }

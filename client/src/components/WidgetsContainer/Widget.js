@@ -6,7 +6,11 @@ class Widget extends Component {
     return (
       <div className="Widget">
         <Card className='blue-grey darken-1' textClassName='white-text' title='Card title' actions={[<a href='#'>This is a link</a>]}>
-        I am a very simple card.
+          <h3>{props.note.title}</h3>
+          <p>
+            {props.note.textBody}
+          </p>
+          {/* <p>Tag: #{props.note.tag}</p> */}
         </Card>
       </div>
     );
